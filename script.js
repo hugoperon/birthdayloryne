@@ -22,7 +22,7 @@ function checkAndUpdateContent() {
         document.body.innerHTML = `
             <div class="locked-message">
                 <h1>❤️ Message pour Loryne ❤️</h1>
-                <p>Ce message sera accessible le 13 décembre 2024 à 21h00</p>
+                <p>Cette page sera accessible le 13 décembre 2024 à 21h00</p>
                 <div class="countdown" id="countdown"></div>
             </div>
         `;
