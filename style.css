@@ -218,4 +218,50 @@ body::before {
     .love-message .signature {
         font-size: 1.3rem;
     }
+}
+
+/* Ajoutez ces styles pour le message de verrouillage */
+.locked-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+}
+
+.locked-message h1 {
+    color: #ff4b8d;
+    margin-bottom: 1rem;
+    font-family: 'Pacifico', cursive;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80px;
+}
+
+.countdown .number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff4b8d;
+}
+
+.countdown .label {
+    font-size: 0.9rem;
+    color: #666;
 } 
