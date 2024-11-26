@@ -139,6 +139,17 @@ function initializeButtons() {
         btn1.disabled = true;
     });
 
+    btn2.addEventListener('click', () => {
+        window.open('https://www.youtube.com/watch?v=VOTRE_ID_VIDEO', '_blank');
+        btn3.disabled = false;
+        btn2.disabled = true;
+    });
+    
+    btn3.addEventListener('click', () => {
+        messageText.innerHTML = "Regarde Hugo dans les yeux maintenant, il a quelque chose à te donner ❤️";
+        messageText.classList.add('visible');
+        btn3.disabled = true;
+    });
     // Répétez pour les autres boutons...
 }
 
