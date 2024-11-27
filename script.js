@@ -3,14 +3,11 @@ let btn2 = document.getElementById('btn2');
 let btn3 = document.getElementById('btn3');
 let messageText = document.getElementById('messageText');
 
-// Définition de la date cible
 const targetDate = new Date('2024-12-13T21:00:00');
 
-// Variable pour stocker le contenu original
 let originalContent = '';
 
 function initializePage() {
-    // Sauvegarder le contenu original
     originalContent = document.body.innerHTML;
     checkAndUpdateContent();
 }
@@ -18,7 +15,6 @@ function initializePage() {
 function checkAndUpdateContent() {
     const currentDate = new Date();
     if (currentDate < targetDate) {
-        // Si la date actuelle est avant la date cible
         document.body.innerHTML = `
             <div class="locked-message">
                 <h1>❤️ Message pour Loryne ❤️</h1>
@@ -28,9 +24,7 @@ function checkAndUpdateContent() {
         `;
         startCountdown();
     } else {
-        // Si la date est atteinte, afficher le contenu original
         document.body.innerHTML = originalContent;
-        // Réinitialiser les événements des boutons
         initializeButtons();
     }
 }
@@ -43,9 +37,7 @@ function startCountdown() {
         const timeDifference = targetDate - currentDate;
         
         if (timeDifference <= 0) {
-            // Au lieu de recharger la page, on affiche le contenu original
             document.body.innerHTML = originalContent;
-            // Réinitialiser les événements des boutons
             initializeButtons();
             return;
         }
@@ -79,14 +71,12 @@ function startCountdown() {
     setInterval(updateCountdown, 1000);
 }
 
-// Fonction pour réinitialiser les événements des boutons
 function initializeButtons() {
     let btn1 = document.getElementById('btn1');
     let btn2 = document.getElementById('btn2');
     let btn3 = document.getElementById('btn3');
     let messageText = document.getElementById('messageText');
 
-    // Réinitialiser vos événements de boutons ici
     btn1.addEventListener('click', () => {
         messageText.className = 'love-message';
         messageText.innerHTML = `
@@ -140,7 +130,7 @@ function initializeButtons() {
     });
 
     btn2.addEventListener('click', () => {
-        window.open('https://www.youtube.com/watch?v=VOTRE_ID_VIDEO', '_blank');
+        window.open('https://youtube.com/shorts/OCZ0uE1LvOQ?feature=share', '_blank');
         btn3.disabled = false;
         btn2.disabled = true;
     });
@@ -150,8 +140,6 @@ function initializeButtons() {
         messageText.classList.add('visible');
         btn3.disabled = true;
     });
-    // Répétez pour les autres boutons...
 }
 
-// Modifier l'appel initial
 window.onload = initializePage; 
